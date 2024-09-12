@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   kafka:
-    image: confluentinc/cp-kafka:latest
+    image: confluentinc/cp-kafka:7.3.0
     depends_on:
       - zookeeper
     ports:
@@ -17,7 +17,7 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
   zookeeper:
-    image: confluentinc/cp-zookeeper:latest
+    image: confluentinc/cp-zookeeper:7.3.0
     ports:
       - "22181:2181"
     environment:
